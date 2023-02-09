@@ -37,14 +37,9 @@ buat pengganti network monitor nya firmware sebelah masbro
 
 - Download / Clone repository ini
 - Copy Folder `netdata` ke folder `/www/`
-- Buka folder `/www/netdata/execute` masbro
-- Copy / Cut file `netdata.sh` ke folder `/sbin/`
-- Lalu ketik di terminal `chmod +x /sbin/netdata.sh`
-- Lanjot ketik di terminal `/sbin/netdata.sh`
-- Edit crontab / Scheduled task di LuCi dan tambahkan command `* */5 * * * /sbin/netdata.sh`
-- Tinggal Pancal di website http://192.168.1.1/netdata/
-- #updated sudah tidak perlu masbro tinggal copy aja si netdata ke folder /www/ wkwkwk  langsung buka aja ke http://192.168.1.1/netdata salam capybara
+- #updated sudah tidak perlu masbro tinggal copy aja si netdata ke folder /www/ wkwkwk  langsung buka aja ke http://192.168.1.1/netdata 
 - Ready pamer dah akwoakaoak
+- salam baiklah masbro capybara
 
 ### Cara Mudah
 
@@ -86,7 +81,9 @@ info lebih lengkap : https://github.com/nosignals/ubus-vnstat-api
 
 ## Cara nambah di menu LuCi Dashboard 
 
-- copy aja `alphanetdata.lua` dan `alphanetdata.htm` ke masing masing direktori yang sesuai dengan yang tercantum di deskripsinya masbro
+- copy `alphanetdata.htm` ke direktori `/usr/lib/lua/luci/view/`
+- copy `alphanetdata.lua` ke direktori `/usr/lib/lua/luci/controller/
+
 
 ## Donasi
 
