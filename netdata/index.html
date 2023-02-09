@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Alpha OS X netdata | Dashboard</title>
+  <!-- Favicon -->
+  <link rel="shortcut icon" href="./img/svg/logo.svg" type="image/x-icon">
+  <!-- Custom styles -->
+  <link rel="stylesheet" href="./css/style.min.css">
+</head>
+
+<body>
+  <div class="layer"></div>
+<!-- ! Body -->
+<a class="skip-link sr-only" href="#skip-target">Skip to content</a>
+<div class="page-flex">
+  <!-- ! Sidebar -->
+  <aside class="sidebar">
+    <div class="sidebar-start">
+        <div class="sidebar-head">
+            <a href="/" class="logo-wrapper" title="Home">
+                <span class="sr-only">Home</span>
+                <div class="logo-text">
+                    <span class="logo-title">Alpha OS</span>
+                    <span class="logo-subtitle">N E T D A T A</span>
+                </div>
+
+            </a>
+            <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
+                <span class="sr-only">Toggle menu</span>
+                <span class="icon menu-toggle" aria-hidden="true"></span>
+            </button>
+        </div>
+        <div class="sidebar-body">
+            <ul class="sidebar-body-menu">
+                <li>
+                    <a class="active" href=""><span class="icon home" aria-hidden="true"></span>Dashboard</a>
+                </li>
+                <li>
+                  <a class="show-cat-btn" href="##">
+                      <span class="icon document" aria-hidden="true"></span>Contributor
+                      <span class="category__btn transparent-btn" title="Open list">
+                          <span class="sr-only">Open list</span>
+                          <span class="icon arrow-down" aria-hidden="true"></span>
+                      </span>
+                  </a>
+                  <ul class="cat-sub-menu">
+                      <li>
+                          <a href="">Deri Sahertian</a>
+                      </li>
+                      <li>
+                          <a href="">Dimas Vito</a>
+                      </li>
+                      <li>
+                        <a href="">Chandika Nurdiansyah</a>
+                    </li>
+                  </ul>
+              </li>
+            </ul>
+            
+            
+        </div>
+    </div>
+</aside>
+  <div class="main-wrapper">
+    <!-- ! Main nav -->
+    <nav class="main-nav--bg">
+  <div class="container main-nav">
+    <div class="main-nav-start">
+    </div>
+    <div class="main-nav-end">
+      <button class="sidebar-toggle transparent-btn" title="Menu" type="button">
+        <span class="sr-only">Toggle menu</span>
+        <span class="icon menu-toggle--gray" aria-hidden="true"></span>
+      </button>
+      <div class="lang-switcher-wrapper">
+        
+      </div>
+     
+      <div class="notification-wrapper">
+        
+      </div>
+      <div class="nav-user-wrapper">
+        <button class="theme-switcher gray-circle-btn" type="button" title="Ganti Tema Masbro">
+          <span class="sr-only">Ganti Tema Masbro</span>
+          <i class="sun-icon" data-feather="sun" aria-hidden="true"></i>
+          <i class="moon-icon" data-feather="moon" aria-hidden="true"></i>
+        </button>
+      </div>
+    </div>
+  </div>
+</nav>
+    <!-- ! Main -->
+    <main class="main users chart-page" id="skip-target">
+      <div class="container">
+        <h2 class="main-title"><class id="deviceid">(tunggu bentar,lagi baca masbro)</class></h2>
+        <div class="row stat-cards">
+          <div class="col-md-6 col-xl-3">
+            <article class="stat-cards-item">
+              <div class="stat-cards-icon primary">
+                <i data-feather="arrow-down-circle" aria-hidden="true"></i>
+              </div>
+              <div class="stat-cards-info">
+                <p class="stat-cards-info__num">br-lan</p>
+                <p class="stat-cards-info__title"><class id="guid">no data</class></p>
+                <p class="stat-cards-info__progress">
+                  <span class="stat-cards-info__profit success">
+                    <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="upbr">no data</class>
+                  </span>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="stat-cards-item">
+              <div class="stat-cards-icon warning">
+                <i data-feather="cpu" aria-hidden="true"></i>
+              </div>
+              <div class="stat-cards-info">
+                <p class="stat-cards-info__num">CPU</p>
+                <p class="stat-cards-info__title"><class id="cpustat">no data</class></p>
+                <p class="stat-cards-info__progress">
+                  <span class="stat-cards-info__profit success">
+                    <i data-feather="user" aria-hidden="true"></i><class id="cpustatuser">no data</class>
+                  </span>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="stat-cards-item">
+              <div class="stat-cards-icon purple">
+                <i data-feather="arrow-down-circle" aria-hidden="true"></i>
+              </div>
+              <div class="stat-cards-info">
+                <p class="stat-cards-info__num">ETH 1</p>
+                <p class="stat-cards-info__title"><class id="eth1">no data</class></p>
+                <p class="stat-cards-info__progress">
+                  <span class="stat-cards-info__profit danger">
+                    <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="eth1up">no data</class>
+                  </span>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="stat-cards-item">
+              <div class="stat-cards-icon purple">
+                <i data-feather="arrow-down-circle" aria-hidden="true"></i>
+              </div>
+              <div class="stat-cards-info">
+                <p class="stat-cards-info__num">ETH 2</p>
+                <p class="stat-cards-info__title"><class id="eth2">no data</class></p>
+                <p class="stat-cards-info__progress">
+                  <span class="stat-cards-info__profit danger">
+                    <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="eth2up">no data</class>
+                  </span>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="stat-cards-item">
+              <div class="stat-cards-icon purple">
+                <i data-feather="arrow-down-circle" aria-hidden="true"></i>
+              </div>
+              <div class="stat-cards-info">
+                <p class="stat-cards-info__num">WWAN 0</p>
+                <p class="stat-cards-info__title"><class id="wwan0">no data</class></p>
+                <p class="stat-cards-info__progress">
+                  <span class="stat-cards-info__profit danger">
+                    <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="wwan0up">no data</class>
+                  </span>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="stat-cards-item">
+              <div class="stat-cards-icon purple">
+                <i data-feather="arrow-down-circle" aria-hidden="true"></i>
+              </div>
+              <div class="stat-cards-info">
+                <p class="stat-cards-info__num">USB 0</p>
+                <p class="stat-cards-info__title"><class id="usb0">no data</class></p>
+                <p class="stat-cards-info__progress">
+                  <span class="stat-cards-info__profit danger">
+                    <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="usb0up">no data</class>
+                  </span>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="stat-cards-item">
+              <div class="stat-cards-icon success">
+                <i data-feather="feather" aria-hidden="true"></i>
+              </div>
+              <div class="stat-cards-info">
+                <p class="stat-cards-info__num">Ram Bebas</p>
+                <p class="stat-cards-info__title"><class id="ramfree">no data</class></p>
+                <p class="stat-cards-info__progress">
+                  <span class="stat-cards-info__profit warning">
+                    <i data-feather="hard-drive" aria-hidden="true"></i><class id="ramuse">no data</class>
+                  </span>
+                </p>
+              </div>
+            </article>
+          </div>
+          <div class="col-md-6 col-xl-3">
+            <article class="stat-cards-item">
+              <div class="stat-cards-icon success">
+                <i data-feather="feather" aria-hidden="true"></i>
+              </div>
+              <div class="stat-cards-info">
+                <p class="stat-cards-info__num">Ram Terpakai</p>
+                <p class="stat-cards-info__title">share : <class id="ramused">no data</class></p>
+                <p class="stat-cards-info__progress">
+                  <span class="stat-cards-info__profit warning">
+                    <i data-feather="trash" aria-hidden="true"></i><class id="rambuffered"> no data</class>
+                  </span>
+                </p>
+                <p class="stat-cards-info__progress">
+                  <span class="stat-cards-info__profit warning">
+                    <i data-feather="trash-2" aria-hidden="true"></i><class id="ramcache"> no data</class>
+                  </span>
+                </p>
+              </div>
+            </article>
+          </div>
+        </div>
+        
+        <div class="row">
+
+          <div class="col-lg-9">
+
+            <article class="white-block">
+              <div class="top-cat-title">
+                <h3>Informasi Perangkat Sistem</h3>
+                <p>Your System Information</p>
+              </div>
+              <ul class="top-cat-list">
+                <li>
+                  <a href="">
+                    <div class="top-cat-list__title">
+                      Nama Host identitas (Hostname) <span>your hostname</span>
+                    </div>
+                    <p><class id="hostname">belum terbaca</class></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="top-cat-list__title">
+                      Device yang kamu pake <span>your device</span>
+                    </div>
+                    <p><class id="deviceid2">belum terbaca</class></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="top-cat-list__title">
+                      Versi Kernel <span>kernel version</span>
+                    </div>
+                    <p><class id="value1">belum terbaca</class></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="top-cat-list__title">
+                      Jumlah Core dalam Prosesor yang Kamu pake <span>Core total</span>
+                    </div>
+                    <p><class id="coreproci">belum terbaca</class></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="top-cat-list__title">
+                      Clock Per Core Prosesor <span>Core clock Proccesor</span>
+                    </div>
+                    <p><class id="clockproci">0</class> Mhz</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="top-cat-list__title">
+                      Total RAM <span>RAM total</span>
+                    </div>
+                    <p><class id="ram">0</class> MB</p>
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="top-cat-list__title">
+                      Versi OpenWrt <span>OpenWrt Version</span>
+                    </div>
+                    <p><class id="osversi">belum terbaca</class></p>
+                  </a>
+                </li>
+                <li>
+                  <a href="##">
+                    <div class="top-cat-list__title">
+                      Versi Prosesor dan Arsitektur <span>Processor & Architecture version</span>
+                    </div>
+                    <p><class id="arsitek">belum terbaca</class> / <class id="arsitek2">belum terbaca</class></p>
+                  </a>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-3">
+            <article class="white-block">
+              <div class="top-cat-title">
+                <h3>Antarmuka Jaringan</h3>
+                <p>interfaces</p>
+              </div>
+              <ul class="top-cat-list">
+                <li>
+                  <a href="">
+                    <div class="top-cat-list__title">
+                      LAN <span></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Terdeteksi : <span class="purple"><class id="available-brlan">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Protokol : <span class="purple"><class id="proto-brlan">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      IP : <span class="purple"><class id="ipv4-brlan">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      IPv6 : <span class="purple"><class id="ipv6-brlan">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      DNS 1 : <span class="purple"><class id="dns1-brlan">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      DNS 2 : <span class="purple"><class id="dns2-brlan">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Perangkat Sambungan : <span class="purple"><class id="device-brlan">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Total Unggah : <span class="purple"><class id="unggah-brlan">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Total Unduh : <span class="purple"><class id="unduh-brlan">no data</class></span>
+                    </div>
+                    
+                  </a>
+                </li>
+                <li>
+                  <a href="">
+                    <div class="top-cat-list__title">
+                      WAN <span></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Terdeteksi : <span class="purple"><class id="available-eth1">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Protokol : <span class="purple"><class id="proto-eth1">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      IP : <span class="purple"><class id="ipv4-eth1">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      IPv6 : <span class="purple"><class id="ipv6-eth1">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Sumber Rute : <span class="purple"><class id="route-eth1">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      DNS : <span class="purple"><class id="dns1-eth1">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Perangkat Sambungan : <span class="purple"><class id="device-eth1">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Total Unggah : <span class="purple"><class id="unggah-wan">no data</class></span>
+                    </div>
+                    <div class="top-cat-list__subtitle">
+                      Total Unduh : <span class="purple"><class id="unduh-wan">no data</class></span>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </article>
+          </div>
+          <div class="col-lg-9">
+            <article class="white-block">
+              <div class="top-cat-title">
+                <h3>Pemakaian Jaringan</h3>
+                <p>Network Traffic</p>
+              </div>
+              <ul class="top-cat-list">
+                <li>
+                  <li>
+                    <a href="##">
+                      <div class="top-cat-title">
+                      <h3>br-lan</h3>
+                    </div>
+                      <div class="top-cat-list__title">
+                        Hari Ini <span>Tanggal : <class id="trafikhariini-hari-brlan">0</class> - <class id="trafikhariini-bulan-brlan">0</class> - <class id="trafikhariini-tahun-brlan">0</class></span>
+                      </div>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit success">
+                          <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="trafikhariini-tx-brlan">0</class>
+                        </span>
+                      </p>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit success">
+                          <i data-feather="arrow-down-circle" aria-hidden="true"></i><class id="trafikhariini-rx-brlan">0</class>
+                        </span>
+                      </p>
+                    </a>
+                  </li>
+                </li>
+              </ul>
+              <ul class="top-cat-list">
+                <li>
+                  <li>
+                    <a href="##">
+                      <div class="top-cat-title">
+                    </div>
+                      <div class="top-cat-list__title">
+                        Kemarin <span>Tanggal : <class id="trafikkemarin-hari-brlan">0</class> - <class id="trafikkemarin-bulan-brlan">0</class> - <class id="trafikkemarin-tahun-brlan">0</class></span>
+                      </div>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit warning">
+                          <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="trafikkemarin-tx-brlan">0</class>
+                        </span>
+                      </p>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit warning">
+                          <i data-feather="arrow-down-circle" aria-hidden="true"></i><class id="trafikkemarin-rx-brlan">0</class>
+                        </span>
+                      </p>
+                    </a>
+                  </li>
+                </li>
+              </ul>
+              <ul class="top-cat-list">
+                <li>
+                  <li>
+                    <a href="##">
+                      <div class="top-cat-title">
+                    </div>
+                      <div class="top-cat-list__title">
+                        Bulan Ini <span>Tanggal : <class id="trafikbulan-bulan-brlan">0</class> - <class id="trafikbulan-tahun-brlan">0</class></span>
+                      </div>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit danger">
+                          <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="trafikbulan-tx-brlan">0</class>
+                        </span>
+                      </p>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit danger">
+                          <i data-feather="arrow-down-circle" aria-hidden="true"></i><class id="trafikbulan-rx-brlan">0</class>
+                        </span>
+                      </p>
+                    </a>
+                  </li>
+                </li>
+              </ul>
+              <ul class="top-cat-list">
+                <li>
+                  <li>
+                    <a href="##">
+                      <div class="top-cat-title">
+                      <h3>ETH 1</h3>
+                    </div>
+                      <div class="top-cat-list__title">
+                        Hari Ini <span>Tanggal : <class id="trafikhariini-hari-wan">0</class> - <class id="trafikhariini-bulan-wan">0</class> - <class id="trafikhariini-tahun-wan">0</class></span>
+                      </div>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit success">
+                          <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="trafikhariini-tx-wan">0</class>
+                        </span>
+                      </p>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit success">
+                          <i data-feather="arrow-down-circle" aria-hidden="true"></i><class id="trafikhariini-rx-wan">0</class>
+                        </span>
+                      </p>
+                    </a>
+                  </li>
+                </li>
+              </ul>
+              <ul class="top-cat-list">
+                <li>
+                  <li>
+                    <a href="##">
+                      <div class="top-cat-title">
+                    </div>
+                      <div class="top-cat-list__title">
+                        Kemarin <span>Tanggal : <class id="trafikkemarin-hari-wan">0</class> - <class id="trafikkemarin-bulan-wan">0</class> - <class id="trafikkemarin-tahun-wan">0</class></span>
+                      </div>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit warning">
+                          <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="trafikkemarin-tx-wan">0</class>
+                        </span>
+                      </p>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit warning">
+                          <i data-feather="arrow-down-circle" aria-hidden="true"></i><class id="trafikkemarin-rx-wan">0</class>
+                        </span>
+                      </p>
+                    </a>
+                  </li>
+                </li>
+              </ul>
+              <ul class="top-cat-list">
+                <li>
+                  <li>
+                    <a href="##">
+                      <div class="top-cat-title">
+                    </div>
+                      <div class="top-cat-list__title">
+                        Bulan Ini <span>Tanggal : <class id="trafikbulan-bulan-wan">0</class> - <class id="trafikbulan-tahun-wan">0</class></span>
+                      </div>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit danger">
+                          <i data-feather="arrow-up-circle" aria-hidden="true"></i><class id="trafikbulan-tx-wan">0</class>
+                        </span>
+                      </p>
+                      <p class="stat-cards-info__progress">
+                        <span class="stat-cards-info__profit danger">
+                          <i data-feather="arrow-down-circle" aria-hidden="true"></i><class id="trafikbulan-rx-wan">0</class>
+                        </span>
+                      </p>
+                    </a>
+                  </li>
+                </li>
+              </ul>
+            </article>
+          </div>
+        </div>
+      </div>
+    </main>
+    <!-- ! Footer -->
+    <footer class="footer">
+  <div class="container footer--flex">
+    <div class="footer-start">
+      <p>2022 © derisamedia</p>
+    </div>
+    <ul class="footer-end">
+      <li><a href="">indo-wrt</a></li>
+      <li><a href="">DBAI</a></li>
+      <li><a href="">Yayasan Gterongers</a></li>
+    </ul>
+  </div>
+</footer>
+  </div>
+</div>
+<!-- Chart library -->
+<script src="./plugins/chart.min.js"></script>
+<!-- Icons library -->
+<script src="plugins/feather.min.js"></script>
+<!-- data netdata -->
+<script src="plugins/data-netdata.js"></script>
+<!-- data status sistem netdata -->
+
+<!-- Custom scripts -->
+<script src="js/script.js"></script>
+</body>
+
+</html>
