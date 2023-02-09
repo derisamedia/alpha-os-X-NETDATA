@@ -1,6 +1,6 @@
 
 # alpha-os-X-NETDATA 
-buat pengganti network monitor nya firmware sebelah masbro
+A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 ## Fitur
 
 - Monitoring NETDATA
