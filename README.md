@@ -14,14 +14,22 @@ buat pengganti network monitor nya firmware sebelah masbro
 ![image](https://raw.githubusercontent.com/derisamedia/alpha-os-X-NETDATA/main/preview.png)
   
 ![image](https://raw.githubusercontent.com/derisamedia/alpha-os-X-NETDATA/main/preview2.png)
+
+![image](https://raw.githubusercontent.com/derisamedia/alpha-os-X-NETDATA/main/preview3.png)
+
+![image](https://raw.githubusercontent.com/derisamedia/alpha-os-X-NETDATA/main/preview4.png)
+
+![image](https://raw.githubusercontent.com/derisamedia/alpha-os-X-NETDATA/main/preview5.png)
+
+![image](https://raw.githubusercontent.com/derisamedia/alpha-os-X-NETDATA/main/preview6.png)
   
 </p>
 </details>
 
 ## Syarat Pasang
 
-- Terinstall package `netdata ubus`
-- jika belum menginstall `netdata ubus` bisa eksekusi command ini di terminal `opkg update && opkg install netdata ubus`
+- Terinstall package `netdata ubus vnstat`
+- jika belum menginstall `netdata ubus vnstat` bisa eksekusi command ini di terminal `opkg update && opkg install netdata ubus vnstat`
 - IP Gateway harus `192.168.1.1` ( Soalnya kalau selain itu bakal ngedit banyak masbroooooo. )
 
 ## Cara Install Netdata
@@ -35,6 +43,7 @@ buat pengganti network monitor nya firmware sebelah masbro
 - Lanjot ketik di terminal `/sbin/netdata.sh`
 - Edit crontab / Scheduled task di LuCi dan tambahkan command `* */5 * * * /sbin/netdata.sh`
 - Tinggal Pancal di website http://192.168.1.1/netdata/
+- #updated sudah tidak perlu masbro tinggal copy aja si netdata ke folder /www/ wkwkwk  langsung buka aja ke http://192.168.1.1/netdata salam capybara
 Ready pamer dah akwoakaoak
 
 ### Cara Mudah
@@ -47,14 +56,10 @@ Ready pamer dah akwoakaoak
 
 ## Konfigurasi Interface
 
-Edit file `/sbin/netdata.sh` yang didalamnya berisi 
-```bash
-#!/bin/bash
+Edit file `/www/netdata/plugin` dan edit yang namanya
+```data-netdata.js
+data tsb jika yang memiliki IP itu menggunakan API dari NETDATA,namun jika tidak ada ip (langsung '/' lihat tengahnya jika dia ada tulisan 'system' dan 'network' dia pakai ubus masbro untuk cek list ubus bisa ketik ini di terminal `ubus list`
 
-ubus call system board > /www/netdata/ubus/sysboard.json
-ubus call network.interface.lan status > /www/netdata/ubus/brlan.json
-ubus call network.interface.wan status > /www/netdata/ubus/eth1.json
-```
 - Untuk mengubah Interface LAN `network.interface.lan` ganti dengan Interface yang ada di `ubus list`
 - Untuk mengubah Interface WAN `network.interface.wan` ganti dengan Interface yang ada di `ubus list`
 - Untuk Interface yang bisa digunakan bisa cek di terminal `ubus list | grep network.interface` untuk mengetahui interface yang bisa digunakan
