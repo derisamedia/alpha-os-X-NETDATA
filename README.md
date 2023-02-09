@@ -44,7 +44,7 @@ buat pengganti network monitor nya firmware sebelah masbro
 - Edit crontab / Scheduled task di LuCi dan tambahkan command `* */5 * * * /sbin/netdata.sh`
 - Tinggal Pancal di website http://192.168.1.1/netdata/
 - #updated sudah tidak perlu masbro tinggal copy aja si netdata ke folder /www/ wkwkwk  langsung buka aja ke http://192.168.1.1/netdata salam capybara
-Ready pamer dah akwoakaoak
+- Ready pamer dah akwoakaoak
 
 ### Cara Mudah
 
@@ -74,6 +74,13 @@ network.interface.lan
 network.interface.loopback
 network.interface.tether
 network.interface.wwan0
+
+namun jika tengah nya bertuliskan `vnstat=eth0` 
+nahhhh dia ambil data dari vnstat masbro cara ambil nya dia membaca protokol interface masbro, 
+sama halnya dengan si netdata ini, 
+misal WAN dia di eth1 maka tuliskan `http://yourhost/api/api.php?vnstat=eth1` 
+begitu juga data yang lainnya
+info lebih lengkap : https://github.com/nosignals/ubus-vnstat-api
 ```
 
 
