@@ -1,0 +1,9 @@
+<%+header%>
+<div class="cbi-map">
+<br>
+<iframe id="alphanetdata" style="width: 100%; min-height: 650px; border: none; border-radius: 2px;"></iframe>
+</div>
+<script type="text/javascript">
+document.getElementById("alphanetdata").src = window.location.protocol + "//" + window.location.hostname + "/netdata/index.html";
+</script>
+<%+footer%>
