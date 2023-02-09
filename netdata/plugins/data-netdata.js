@@ -1,5 +1,6 @@
 var param1 = false
 var param2 = false
+var host = "http://"+window.location.hostname+":19999"
 
 function startLiveUpdate () {
     setInterval(function () {
@@ -26,7 +27,7 @@ function startLiveUpdate () {
     }, 2000);
 }
 function getbrlan(){
-        fetch('http://192.168.1.1:19999/api/v1/data?chart=net.br_lan&after=-1').then(function (response) {
+        fetch(host+'/api/v1/data?chart=net.br_lan&after=-1').then(function (response) {
             return response.json();
         }).then(function (data){
             document.getElementById("guid").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
@@ -36,7 +37,7 @@ function getbrlan(){
         });
 }
 function getcpustat(){
-        fetch('http://192.168.1.1:19999/api/v1/data?chart=system.cpu&after=-1').then(function (response) {
+        fetch(host+'/api/v1/data?chart=system.cpu&after=-1').then(function (response) {
             return response.json();
         }).then(function (data){
             document.getElementById("cpustat").innerHTML = (data.data[0][7]/1+1).toFixed(1) + ' %';
@@ -67,7 +68,7 @@ function getramused(){
     });
 }
 function geteth1(){
-    fetch('http://192.168.1.1:19999/api/v1/data?chart=net.eth1&after=-1').then(function (response) {
+    fetch(host+'/api/v1/data?chart=net.eth1&after=-1').then(function (response) {
         return response.json();
     }).then(function (data){
         document.getElementById("eth1").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
@@ -77,7 +78,7 @@ function geteth1(){
     });
 }
 function geteth2(){
-    fetch('http://192.168.1.1:19999/api/v1/data?chart=net.eth2&after=-1').then(function (response) {
+    fetch(host+'/api/v1/data?chart=net.eth2&after=-1').then(function (response) {
         return response.json();
     }).then(function (data){
         document.getElementById("eth2").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
@@ -87,7 +88,7 @@ function geteth2(){
     });
 }
 function getwwan0(){
-    fetch('http://192.168.1.1:19999/api/v1/data?chart=net.wwan0&after=-1').then(function (response) {
+    fetch(host+'/api/v1/data?chart=net.wwan0&after=-1').then(function (response) {
         return response.json();
     }).then(function (data){
         document.getElementById("wwan0").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
@@ -97,7 +98,7 @@ function getwwan0(){
     });
 }
 function getusb0(){
-    fetch('http://192.168.1.1:19999/api/v1/data?chart=net.usb0&after=-1').then(function (response) {
+    fetch(host+'/api/v1/data?chart=net.usb0&after=-1').then(function (response) {
         return response.json();
     }).then(function (data){
         document.getElementById("usb0").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
@@ -122,7 +123,7 @@ function getsysboard(){
     });
 }
 function getsysboard2(){
-    fetch('http://192.168.1.1:19999/api/v1/info').then(function (response) {
+    fetch(host+'/api/v1/info').then(function (response) {
         return response.json();
     }).then(function (data){
         document.getElementById("ram").innerHTML = (data.ram_total/1000000000).toFixed(3);
