@@ -82,7 +82,7 @@ info lebih lengkap : https://github.com/nosignals/ubus-vnstat-api
 ## Cara nambah di menu LuCi Dashboard 
 
 - copy `alphanetdata.htm` ke direktori `/usr/lib/lua/luci/view/`
-- copy `alphanetdata.lua` ke direktori `/usr/lib/lua/luci/controller/
+- copy `alphanetdata.lua` ke direktori `/usr/lib/lua/luci/controller/`
 
 
 ## Donasi
