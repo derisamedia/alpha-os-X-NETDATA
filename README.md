@@ -56,9 +56,11 @@ Ready pamer dah akwoakaoak
 
 ## Konfigurasi Interface
 
-Edit file `/www/netdata/plugin` dan edit yang namanya
+Edit file `/www/netdata/plugin` dan edit yang namanya data-netdata.js
 ```data-netdata.js
-data tsb jika yang memiliki IP itu menggunakan API dari NETDATA,namun jika tidak ada ip (langsung '/' lihat tengahnya jika dia ada tulisan 'system' dan 'network' dia pakai ubus masbro untuk cek list ubus bisa ketik ini di terminal `ubus list`
+data tsb jika yang memiliki IP itu menggunakan API dari NETDATA,
+namun jika tidak ada ip (langsung '/' lihat tengahnya jika dia ada tulisan 'system' dan 'network' 
+dia pakai ubus masbro untuk cek list ubus bisa ketik ini di terminal `ubus list`
 
 - Untuk mengubah Interface LAN `network.interface.lan` ganti dengan Interface yang ada di `ubus list`
 - Untuk mengubah Interface WAN `network.interface.wan` ganti dengan Interface yang ada di `ubus list`
