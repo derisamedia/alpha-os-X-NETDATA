@@ -99,4 +99,4 @@ Buat yang mau donasi silahkan masbro
 
 Property milik **Alpha OS, derisamedia, indo-wrt, DBAI, Yayasan Gterongers**. Dilarang **ngemod mod dimod remod remake diclaim** lalu dikunci masbro. Capek bikin nya masbro.
 
-### Salam Copybara
+### Salam Masbro Capybara
