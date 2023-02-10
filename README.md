@@ -36,7 +36,7 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 
 - Download / Clone repository ini
 - Copy Folder `netdata` ke folder `/www/`
-- #updated sudah tidak perlu masbro tinggal copy aja si netdata ke folder /www/ wkwkwk  langsung buka aja ke http://ipkamu/netdata 
+- #updated sudah tidak perlu masbro tinggal copy aja si netdata ke folder /www/ wkwkwk  langsung buka aja ke http://ip.kamu/netdata 
 - Ready pamer dah akwoakaoak
 - salam baiklah masbro capybara
 
@@ -46,7 +46,7 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 - Masuk terminal jalankan command `opkg update && opkg install git git-http wget`
 - Jalankan lagi `wget https://raw.githubusercontent.com/derisamedia/alpha-os-X-NETDATA/main/installer.sh && chmod +x installer.sh`
 - Jalankan lagi `bash installer.sh` dan tunggu sampai proses selesai
-- done, tinggal pancal http://IPkamu/netdata/
+- done, tinggal pancal http://IP.kamu/netdata/
 
 ## Konfigurasi Interface
 
