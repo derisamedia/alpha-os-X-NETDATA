@@ -30,14 +30,13 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 
 - Terinstall package `netdata ubus vnstat`
 - jika belum menginstall `netdata ubus vnstat` bisa eksekusi command ini di terminal `opkg update && opkg install netdata ubus vnstat`
-- IP Gateway harus `192.168.1.1` ( Soalnya kalau selain itu bakal ngedit banyak masbroooooo. )
-
+- UPDATE bisa all IP, COBA TEST MASBRO
 ## Cara Install Netdata
 ### Cara Susah
 
 - Download / Clone repository ini
 - Copy Folder `netdata` ke folder `/www/`
-- #updated sudah tidak perlu masbro tinggal copy aja si netdata ke folder /www/ wkwkwk  langsung buka aja ke http://192.168.1.1/netdata 
+- #updated sudah tidak perlu masbro tinggal copy aja si netdata ke folder /www/ wkwkwk  langsung buka aja ke http://ip kamu/netdata 
 - Ready pamer dah akwoakaoak
 - salam baiklah masbro capybara
 
@@ -47,7 +46,7 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 - Masuk terminal jalankan command `opkg update && opkg install git git-http wget`
 - Jalankan lagi `wget https://raw.githubusercontent.com/derisamedia/alpha-os-X-NETDATA/main/installer.sh && chmod +x installer.sh`
 - Jalankan lagi `bash installer.sh` dan tunggu sampai proses selesai
-- done, tinggal pancal http://192.168.1.1/netdata/
+- done, tinggal pancal http://IP kamu/netdata/
 
 ## Konfigurasi Interface
 
