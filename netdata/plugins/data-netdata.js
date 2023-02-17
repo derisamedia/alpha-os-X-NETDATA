@@ -126,9 +126,9 @@ function getsysboard2(){
     fetch(host+'/api/v1/info').then(function (response) {
         return response.json();
     }).then(function (data){
-        document.getElementById("ram").innerHTML = (data.ram_total/1000000000).toFixed(3);
+        document.getElementById("ram").innerHTML = (data.ram_total/1000000).toFixed(0);
         document.getElementById("coreproci").innerHTML = data.cores_total;
-        document.getElementById("clockproci").innerHTML = (data.cpu_freq/1000000000).toFixed(3);
+        document.getElementById("clockproci").innerHTML = (data.cpu_freq/1000000).toFixed(3);
         document.getElementById("arsitek2").innerHTML = data.architecture;
         param2 = true
     }).catch(function (error) {
@@ -154,28 +154,28 @@ function getvnstatbrlan(){
     fetch('/netdata/api/api.php?vnstat=br-lan').then(function (response) {
         return response.json();
     }).then(function (data){
-        document.getElementById("unduh-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.rx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("unggah-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.tx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikhariini-hari-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[3].date.day;
-        document.getElementById("trafikhariini-bulan-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[3].date.month;
-        document.getElementById("trafikhariini-tahun-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[3].date.year;
-        document.getElementById("trafikhariini-rx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.day[3].rx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikhariini-tx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.day[3].tx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikkemarin-hari-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[2].date.day;
-        document.getElementById("trafikkemarin-bulan-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[2].date.month;
-        document.getElementById("trafikkemarin-tahun-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[2].date.year;
-        document.getElementById("trafikkemarin-rx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.day[2].rx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikkemarin-tx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.day[2].tx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikbulan-bulan-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.month[0].date.month;
-        document.getElementById("trafikbulan-tahun-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.month[0].date.year;
-        document.getElementById("trafikbulan-rx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.month[0].rx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikbulan-tx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.month[0].tx/1000000000).toFixed(2) + ' GB';
+        document.getElementById("unduh-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.rx/1000000).toFixed(2) + ' GB';
+        document.getElementById("unggah-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.tx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikhariini-hari-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[0].date.day;
+        document.getElementById("trafikhariini-bulan-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[0].date.month;
+        document.getElementById("trafikhariini-tahun-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[0].date.year;
+        document.getElementById("trafikhariini-rx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.days[0].rx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikhariini-tx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.days[0].tx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikkemarin-hari-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[1].date.day;
+        document.getElementById("trafikkemarin-bulan-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[1].date.month;
+        document.getElementById("trafikkemarin-tahun-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[1].date.year;
+        document.getElementById("trafikkemarin-rx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.days[1].rx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikkemarin-tx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.days[1].tx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikbulan-bulan-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.months[0].date.month;
+        document.getElementById("trafikbulan-tahun-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.months[0].date.year;
+        document.getElementById("trafikbulan-rx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.months[0].rx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikbulan-tx-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.months[0].tx/1000000).toFixed(2) + ' GB';
     }).catch(function (error) {
         console.log(error);
     });
 }
 function geteth1info(){
-    fetch('/netdata/api/api.php?network=wan').then(function (response) {
+    fetch('/netdata/api/api.php?network=WAN1').then(function (response) {
         return response.json();
     }).then(function (data){
         document.getElementById("available-eth1").innerHTML = data.network.data[0].available;
@@ -193,22 +193,22 @@ function getvnstatwan(){
     fetch('/netdata/api/api.php?vnstat=eth1').then(function (response) {
         return response.json();
     }).then(function (data){
-        document.getElementById("unduh-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.rx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("unggah-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.tx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikhariini-hari-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[3].date.day;
-        document.getElementById("trafikhariini-bulan-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[3].date.month;
-        document.getElementById("trafikhariini-tahun-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[3].date.year;
-        document.getElementById("trafikhariini-rx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.day[3].rx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikhariini-tx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.day[3].tx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikkemarin-hari-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[2].date.day;
-        document.getElementById("trafikkemarin-bulan-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[2].date.month;
-        document.getElementById("trafikkemarin-tahun-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.day[2].date.year;
-        document.getElementById("trafikkemarin-rx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.day[2].rx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikkemarin-tx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.day[2].tx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikbulan-bulan-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.month[0].date.month;
-        document.getElementById("trafikbulan-tahun-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.month[0].date.year;
-        document.getElementById("trafikbulan-rx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.month[0].rx/1000000000).toFixed(2) + ' GB';
-        document.getElementById("trafikbulan-tx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.month[0].tx/1000000000).toFixed(2) + ' GB';
+        document.getElementById("unduh-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.rx/1000000).toFixed(2) + ' GB';
+        document.getElementById("unggah-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.tx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikhariini-hari-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[0].date.day;
+        document.getElementById("trafikhariini-bulan-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[0].date.month;
+        document.getElementById("trafikhariini-tahun-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[0].date.year;
+        document.getElementById("trafikhariini-rx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.days[0].rx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikhariini-tx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.days[0].tx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikkemarin-hari-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[1].date.day;
+        document.getElementById("trafikkemarin-bulan-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[1].date.month;
+        document.getElementById("trafikkemarin-tahun-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[1].date.year;
+        document.getElementById("trafikkemarin-rx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.days[1].rx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikkemarin-tx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.days[1].tx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikbulan-bulan-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.months[0].date.month;
+        document.getElementById("trafikbulan-tahun-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.months[0].date.year;
+        document.getElementById("trafikbulan-rx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.months[0].rx/1000000).toFixed(2) + ' GB';
+        document.getElementById("trafikbulan-tx-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.months[0].tx/1000000).toFixed(2) + ' GB';
     }).catch(function (error) {
         console.log(error);
     });
