@@ -37,7 +37,7 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 
 - Download / Clone repository ini
 - Copy Folder `netdata` ke folder `/www/`
-- #updated sudah tidak perlu masbro tinggal copy aja si netdata ke folder /www/ wkwkwk  langsung buka aja ke http://ip.kamu/netdata 
+- langsung buka aja ke http://ip.kamu/netdata 
 - Ready pamer dah akwoakaoak
 - salam baiklah masbro capybara
 
