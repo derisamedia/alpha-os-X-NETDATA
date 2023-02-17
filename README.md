@@ -53,9 +53,9 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 
 Edit file `/www/netdata/plugin` dan edit yang namanya data-netdata.js
 ```data-netdata.js
-data tsb jika yang memiliki IP itu menggunakan API dari NETDATA,
-namun jika tidak ada ip (langsung '/' lihat tengahnya jika dia ada tulisan 'system' dan 'network' 
-dia pakai ubus masbro untuk cek list ubus bisa ketik ini di terminal `ubus list`
+data tsb jika yang data nya seperti ini misal contoh (/api/v1/data?chart=net.usb0&after=-1) itu menggunakan API dari NETDATA,
+namun jika data nya sperti ini contohnya (langsung '/' lihat tengahnya jika dia ada tulisan 'system' 'vnstat' dan 'network' 
+dia pakai ubus dan vnstat masbro untuk cek list ubus bisa ketik ini di terminal `ubus list`
 
 - Untuk mengubah Interface LAN `network.interface.lan` ganti dengan Interface yang ada di `ubus list`
 - Untuk mengubah Interface WAN `network.interface.wan` ganti dengan Interface yang ada di `ubus list`
