@@ -97,7 +97,7 @@ function getwwan0(){
     });
 }
 function getusb0(){
-    fetch('/netdata/api/api.php?netdata=net.wwan0').then(function (response) {
+    fetch('/netdata/api/api.php?netdata=net.usb0').then(function (response) {
         return response.json();
     }).then(function (data){
         document.getElementById("usb0").innerHTML = (data.netdata.data[0].data[0][2]/1000*-1).toFixed(2) + ' mbps';
