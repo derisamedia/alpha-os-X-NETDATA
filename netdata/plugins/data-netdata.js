@@ -1,6 +1,5 @@
 var param1 = false
 var param2 = false
-var host = "http://"+window.location.hostname+":19999"
 
 function startLiveUpdate () {
     setInterval(function () {
@@ -27,21 +26,21 @@ function startLiveUpdate () {
     }, 2000);
 }
 function getbrlan(){
-        fetch(host+'/api/v1/data?chart=net.br_lan&after=-1').then(function (response) {
+        fetch('/netdata/api/api.php?netdata=net.br-lan').then(function (response) {
             return response.json();
         }).then(function (data){
-            document.getElementById("guid").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
-            document.getElementById("upbr").innerHTML = (data.data[0][1]/1000*1).toFixed(1) + ' mbps';
+            document.getElementById("guid").innerHTML = (data.netdata.data[0].data[0][2]/1000*-1).toFixed(2) + ' mbps';
+            document.getElementById("upbr").innerHTML = (data.netdata.data[0].data[0][1]/1000*1).toFixed(1) + ' mbps';
         }).catch(function (error) {
             console.log(error);
         });
 }
 function getcpustat(){
-        fetch(host+'/api/v1/data?chart=system.cpu&after=-1').then(function (response) {
+        fetch('/netdata/api/api.php?netdata=system.cpu').then(function (response) {
             return response.json();
         }).then(function (data){
-            document.getElementById("cpustat").innerHTML = (data.data[0][7]/1+1).toFixed(1) + ' %';
-            document.getElementById("cpustatuser").innerHTML = (data.data[0][6]/1+1).toFixed(1) + ' %';
+            document.getElementById("cpustat").innerHTML = (data.netdata.data[0].data[0][7]/1+1).toFixed(1) + ' %';
+            document.getElementById("cpustatuser").innerHTML = (data.netdata.data[0].data[0][6]/1+1).toFixed(1) + ' %';
         }).catch(function (error) {
             console.log(error);
         });
@@ -68,41 +67,41 @@ function getramused(){
     });
 }
 function geteth1(){
-    fetch(host+'/api/v1/data?chart=net.eth1&after=-1').then(function (response) {
+    fetch('/netdata/api/api.php?netdata=net.eth1').then(function (response) {
         return response.json();
     }).then(function (data){
-        document.getElementById("eth1").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
-        document.getElementById("eth1up").innerHTML = (data.data[0][1]/1000*1).toFixed(1) + ' mbps';
+        document.getElementById("eth1").innerHTML = (data.netdata.data[0].data[0][2]/1000*-1).toFixed(2) + ' mbps';
+        document.getElementById("eth1up").innerHTML = (data.netdata.data[0].data[0][1]/1000*1).toFixed(1) + ' mbps';
     }).catch(function (error) {
         console.log(error);
     });
 }
 function geteth2(){
-    fetch(host+'/api/v1/data?chart=net.eth2&after=-1').then(function (response) {
+    fetch('/netdata/api/api.php?netdata=net.eth2').then(function (response) {
         return response.json();
     }).then(function (data){
-        document.getElementById("eth2").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
-        document.getElementById("eth2up").innerHTML = (data.data[0][1]/1000*1).toFixed(1) + ' mbps';
+        document.getElementById("eth2").innerHTML = (data.netdata.data[0].data[0][2]/1000*-1).toFixed(2) + ' mbps';
+        document.getElementById("eth2up").innerHTML = (data.netdata.data[0].data[0][1]/1000*1).toFixed(1) + ' mbps';
     }).catch(function (error) {
         console.log(error);
     });
 }
 function getwwan0(){
-    fetch(host+'/api/v1/data?chart=net.wwan0&after=-1').then(function (response) {
+    fetch('/netdata/api/api.php?netdata=net.wwan0').then(function (response) {
         return response.json();
     }).then(function (data){
-        document.getElementById("wwan0").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
-        document.getElementById("wwan0up").innerHTML = (data.data[0][1]/1000*1).toFixed(1) + ' mbps';
+        document.getElementById("wwan0").innerHTML = (data.netdata.data[0].data[0][2]/1000*-1).toFixed(2) + ' mbps';
+        document.getElementById("wwan0up").innerHTML = (data.netdata.data[0].data[0][1]/1000*1).toFixed(1) + ' mbps';
     }).catch(function (error) {
         console.log(error);
     });
 }
 function getusb0(){
-    fetch(host+'/api/v1/data?chart=net.usb0&after=-1').then(function (response) {
+    fetch('/netdata/api/api.php?netdata=net.wwan0').then(function (response) {
         return response.json();
     }).then(function (data){
-        document.getElementById("usb0").innerHTML = (data.data[0][2]/1000*-1).toFixed(2) + ' mbps';
-        document.getElementById("usb0up").innerHTML = (data.data[0][1]/1000*1).toFixed(1) + ' mbps';
+        document.getElementById("usb0").innerHTML = (data.netdata.data[0].data[0][2]/1000*-1).toFixed(2) + ' mbps';
+        document.getElementById("usb0up").innerHTML = (data.netdata.data[0].data[0][1]/1000*1).toFixed(1) + ' mbps';
     }).catch(function (error) {
         console.log(error);
     });
@@ -123,13 +122,13 @@ function getsysboard(){
     });
 }
 function getsysboard2(){
-    fetch(host+'/api/v1/info').then(function (response) {
+    fetch('/netdata/api/api.php?netdata=info').then(function (response) {
         return response.json();
     }).then(function (data){
-        document.getElementById("ram").innerHTML = (data.ram_total/1000000).toFixed(0);
-        document.getElementById("coreproci").innerHTML = data.cores_total;
-        document.getElementById("clockproci").innerHTML = (data.cpu_freq/1000000).toFixed(3);
-        document.getElementById("arsitek2").innerHTML = data.architecture;
+        document.getElementById("ram").innerHTML = (data.netdata.data[0].ram_total/1000000).toFixed(0);
+        document.getElementById("coreproci").innerHTML = data.netdata.data[0].cores_total;
+        document.getElementById("clockproci").innerHTML = (data.netdata.data[0].cpu_freq/1000000).toFixed(3);
+        document.getElementById("arsitek2").innerHTML = data.netdata.data[0].architecture;
         param2 = true
     }).catch(function (error) {
         console.log(error);
