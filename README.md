@@ -53,8 +53,10 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 
 Edit file `/www/netdata/plugin` dan edit yang namanya data-netdata.js
 ```data-netdata.js
-data tsb jika yang data nya seperti ini misal contoh (/netdata/api/api.php?netdata=system.cpu) itu menggunakan API dari NETDATA,
-namun jika data nya sperti ini contohnya (/netdata/api/api.php?system=info atau /netdata/api/api.php?network=lan ) dia pakai ubus
+data tsb jika yang data nya seperti ini misal contoh (/netdata/api/api.php?netdata=system.cpu)
+itu menggunakan API dari NETDATA,
+namun jika data nya sperti ini contohnya (/netdata/api/api.php?system=info 
+atau /netdata/api/api.php?network=lan ) dia pakai ubus,
 jika data nya sperti ini contohnya (/netdata/api/api.php?vnstat=br-lan) dia pakai vnstat
 
 lihat patokan tengahnya aja, dia ada tulisan 'netdata 'system' 'vnstat' dan 'network' sebelum (=)
@@ -63,7 +65,8 @@ untuk konfigurasi ubus
 
 - Untuk mengubah Interface LAN `network.interface.lan` ganti dengan Interface yang ada di `ubus list`
 - Untuk mengubah Interface WAN `network.interface.wan` ganti dengan Interface yang ada di `ubus list`
-- Untuk Interface yang bisa digunakan bisa cek di terminal `ubus list | grep network.interface` untuk mengetahui interface yang bisa digunakan
+- Untuk Interface yang bisa digunakan bisa cek di terminal `ubus list | grep network.interface` 
+  untuk mengetahui interface yang bisa digunakan
 - Contoh hasil command `ubus list | grep network.interface`
 ```bash
 ~# ubus list | grep network.interface
@@ -73,6 +76,10 @@ network.interface.lan
 network.interface.loopback
 network.interface.tether
 network.interface.wwan0
+
+seperti contoh yang di data-netdata.js nya tertuliskan (/netdata/api/api.php?network=WAN1)
+nah berarti jika di ubus list, nama data nya pasti (network.interface.WAN1) 
+jadi perhatikan nama interface sesuai yang tertera di ubus list,perhatikan besar kecilnya
 
 untuk konfigurasi vnstat
 
@@ -85,7 +92,7 @@ untuk konfigurasi netdata
 
 jika tengah nya bertuliskan `net.wwan0` 
 nahhhh dia ambil data dari netdata masbro cara ambil nya dia membaca protokol interface masbro,  
-misal WAN dia di eth1 maka tuliskan `/netdata/api/api.php?netdata=net.wwan0` 
+misal WAN dia di eth1 maka tuliskan `/netdata/api/api.php?netdata=net.eth1` 
 namun disini agak beda dengan si vnstat. Si netdata ini terutama kalau mau ambil data interface harus
 diawali dengan (net.) jangan sampai lupa ya masbro
 
