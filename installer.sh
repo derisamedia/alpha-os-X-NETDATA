@@ -42,6 +42,8 @@ function installing(){
 	echo '2.2 Copying Files...'
 	rm -rf /www/netdata
 	mv alpha-os-X-NETDATA/netdata /www/netdata
+	mv alpha-os-X-NETDATA/alphanetdata.htm /usr/lib/lua/luci/view/
+	mv alpha-os-X-NETDATA/alphanetdata.lua /usr/lib/lua/luci/controller/
 	sleep 2
 	echo '2.3 Clearing Temporary Files...'
 	rm -rf alpha-os-X-NETDATA
