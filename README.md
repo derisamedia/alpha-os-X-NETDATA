@@ -33,7 +33,7 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 - kalo data eth1 belum muncul,coba buka luci app vnstat nya (vnstat traffic monitor) lalu tambahkan interface eth1
 - jangan lupa clear cache and cookies
 ## Cara Install Netdata
-### Cara Susah
+### Cara Susah (pake banget)
 
 - Download / Clone repository ini
 - Copy Folder `netdata` ke folder `/www/`
@@ -53,9 +53,13 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 
 Edit file `/www/netdata/plugin` dan edit yang namanya data-netdata.js
 ```data-netdata.js
-data tsb jika yang data nya seperti ini misal contoh (/api/v1/data?chart=net.usb0&after=-1) itu menggunakan API dari NETDATA,
-namun jika data nya sperti ini contohnya langsung '/' lihat tengahnya jika dia ada tulisan 'system' 'vnstat' dan 'network' 
-dia pakai ubus dan vnstat masbro untuk cek list ubus bisa ketik ini di terminal `ubus list`
+data tsb jika yang data nya seperti ini misal contoh (/netdata/api/api.php?netdata=system.cpu) itu menggunakan API dari NETDATA,
+namun jika data nya sperti ini contohnya (/netdata/api/api.php?system=info atau /netdata/api/api.php?network=lan ) dia pakai ubus
+jika data nya sperti ini contohnya (/netdata/api/api.php?vnstat=br-lan) dia pakai vnstat
+
+lihat patokan tengahnya aja, dia ada tulisan 'netdata 'system' 'vnstat' dan 'network' sebelum (=)
+
+untuk konfigurasi ubus
 
 - Untuk mengubah Interface LAN `network.interface.lan` ganti dengan Interface yang ada di `ubus list`
 - Untuk mengubah Interface WAN `network.interface.wan` ganti dengan Interface yang ada di `ubus list`
@@ -70,11 +74,21 @@ network.interface.loopback
 network.interface.tether
 network.interface.wwan0
 
-namun jika tengah nya bertuliskan `vnstat=eth0` 
-nahhhh dia ambil data dari vnstat masbro cara ambil nya dia membaca protokol interface masbro, 
-sama halnya dengan si netdata ini, 
-misal WAN dia di eth1 maka tuliskan `http://yourhost/api/api.php?vnstat=eth1` 
+untuk konfigurasi vnstat
+
+jika tengah nya bertuliskan `vnstat=eth0` 
+nahhhh dia ambil data dari vnstat masbro cara ambil nya dia membaca protokol interface masbro,  
+misal WAN dia di eth1 maka tuliskan `/netdata/api/api.php?vnstat=eth1` 
 begitu juga data yang lainnya
+
+untuk konfigurasi netdata
+
+jika tengah nya bertuliskan `net.wwan0` 
+nahhhh dia ambil data dari netdata masbro cara ambil nya dia membaca protokol interface masbro,  
+misal WAN dia di eth1 maka tuliskan `/netdata/api/api.php?netdata=net.wwan0` 
+namun disini agak beda dengan si vnstat. Si netdata ini terutama kalau mau ambil data interface harus
+diawali dengan (net.) jangan sampai lupa ya masbro
+
 info lebih lengkap : https://github.com/nosignals/ubus-vnstat-api
 ```
 
