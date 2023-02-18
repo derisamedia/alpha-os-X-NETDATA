@@ -153,6 +153,7 @@ function getvnstatbrlan(){
     fetch('/netdata/api/api.php?vnstat=br-lan').then(function (response) {
         return response.json();
     }).then(function (data){
+        document.getElementById("id-lan").innerHTML = data.vnstat.data[0].interfaces[0].id;
         document.getElementById("unduh-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.rx/1000000).toFixed(2) + ' GB';
         document.getElementById("unggah-brlan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.tx/1000000).toFixed(2) + ' GB';
         document.getElementById("trafikhariini-hari-brlan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[0].date.day;
@@ -192,6 +193,7 @@ function getvnstatwan(){
     fetch('/netdata/api/api.php?vnstat=eth1').then(function (response) {
         return response.json();
     }).then(function (data){
+        document.getElementById("id-wan").innerHTML = data.vnstat.data[0].interfaces[0].id;
         document.getElementById("unduh-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.rx/1000000).toFixed(2) + ' GB';
         document.getElementById("unggah-wan").innerHTML = (data.vnstat.data[0].interfaces[0].traffic.total.tx/1000000).toFixed(2) + ' GB';
         document.getElementById("trafikhariini-hari-wan").innerHTML = data.vnstat.data[0].interfaces[0].traffic.days[0].date.day;
