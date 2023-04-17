@@ -32,6 +32,7 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 - jika belum menginstall `netdata ubus vnstat` bisa eksekusi command ini di terminal `opkg update && opkg install netdata ubus vnstat`
 - kalo data eth1 belum muncul,coba buka luci app vnstat nya (vnstat traffic monitor) lalu tambahkan interface eth1
 - jangan lupa clear cache and cookies
+
 ## Cara Install Netdata
 ### Cara Susah (pake banget)
 
@@ -40,6 +41,7 @@ A Clean UI Network Monitoring Base NETDATA (not a network monitor)
 - langsung buka aja ke http://ip.kamu/netdata 
 - Ready pamer dah akwoakaoak
 - salam baiklah masbro capybara
+- ada juga file ipk nya jika mau cara paling susah, tinggal install aja wkwkwkw ada di tab releases
 
 ### Cara Mudah
 
